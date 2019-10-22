@@ -1,4 +1,7 @@
 import React from 'react';
+import NavBar from '../components/Navigation';
+import Footer from '../components/Footer';
+import About from '../components/About';
 
 class App extends React.Component {
     constructor() {
@@ -14,7 +17,10 @@ class App extends React.Component {
     render() {
         return (
             <div>
+                <NavBar />
+                <About />
                 This will be the App!
+                <Footer />
             </div>
         )
     }
