@@ -1,1 +1,12 @@
 /* <------------- CSS TO BE ADDED HERE --------------> */
+body {
+    margin: 0px;
+    text-align: center
+}
+/* <------------- NAVIGATION --------------> */
+
+.navigation {
+    display: flex;
+    background-color: black;
+    width: 100%
+}
