@@ -16,7 +16,10 @@ const About = (props) => {
                     </Col>
                     <Col className="description-container" sm={8}>
                         <div className="description">
-                            This will be where the text will go about the photographer.
+                            Hello!  My name is Brandon and I am a photographer based in Austin, TX.  I take
+                            my inspiration from my the world around me, focusing on nature and architecture
+                            as my muses.  Geometric shapes and Arabic design appeal to me and I play with
+                            the contrast between light and dark.
                         </div>
                     </Col>
                 </Row>

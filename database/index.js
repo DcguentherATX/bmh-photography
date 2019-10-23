@@ -1,0 +1,30 @@
+const mongoose = require('mongoose');
+const photos = require('./photos.json');
+
+mongoose.connect(`mongodb://localhost/Photos`, { useNewURLParser: true });
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+
+const photoSchema = mongoose.Schema({
+    sku: Number,
+    image: String,
+    price: Number,
+    rating: Number,
+    category: [String]
+});
+
+let Photos = mongoose.model('Photos', photoSchema);
+
+const seedDatabase = (data) => {
+    Photos.insertMany(data, (err) => {
+        if (err) {
+            console.log('insertion error: ', err);
+        } else {
+            console.log('data inserted properly to database');
+        }
+    })
+}
+
+// seedDatabase(photos);
+db.Photos.find({ sku: 1 });

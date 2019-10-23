@@ -62,8 +62,14 @@ body {
     border-radius: 50%;
 }
 
+.description-container {
+  display: flex;
+  justify-content: center;
+}
+
 .description {
-  padding: 25px
+  padding: 25px;
+  max-width: 75%;
 }
 
 /* <------------- MAIN CONTAINER --------------> */
