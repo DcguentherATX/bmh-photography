@@ -106,6 +106,17 @@ body {
     flex-direction: column;
 }
 
+.rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-label {
+    padding-right: 5px
+}
+
 /* <------------- FOOTER --------------> */
 
 .footer-container {

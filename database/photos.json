@@ -1,6 +1,7 @@
 [
     {
         "sku": 1,
+        "title": "Aruba",
         "image": "https://atlantis.nyc3.digitaloceanspaces.com/styled/8f4597e8d337d22501cede98b6b0ecb4",
         "price": 79.99,
         "rating": 4.9,
@@ -11,6 +12,7 @@
     },
     {
         "sku": 2,
+        "title": "Florida",
         "image": "https://img2.10bestmedia.com/Images/Photos/352450/GettyImages-913753556_54_990x660.jpg",
         "price": 15.99,
         "rating": 4.4,
@@ -21,6 +23,7 @@
     },
     {
         "sku": 3,
+        "title": "Thailand",
         "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&w=1000&q=80",
         "price": 159.99,
         "rating": 3.7,
@@ -31,6 +34,7 @@
     },
     {
         "sku": 4,
+        "title": "Turks and Caicos",
         "image": "https://cdn.sandals.com/beaches/v12/images/general/destinations/home/beach.jpg",
         "price": 109.69,
         "rating": 4.5,
@@ -41,6 +45,7 @@
     },
     {
         "sku": 5,
+        "title": "Hawaii",
         "image": "https://www.planetware.com/photos-large/USHI/hawaii-honolulu-beaches-oahu-kailua-beach.jpg",
         "price": 99.25,
         "rating": 4.9,
@@ -51,6 +56,7 @@
     },
     {
         "sku": 6,
+        "title": "Australia",
         "image": "http://worldlandforms.com/landforms/wp-content/uploads/2015/03/Beach.jpg",
         "price": 359.99,
         "rating": 4.6,
@@ -61,6 +67,7 @@
     },
     {
         "sku": 7,
+        "title": "Tobago",
         "image": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1600x1000%2Fpublic%2F1508869913%2Fnavagio-shipwreck-beach-zakynthos-greece-WHITESAND1017.jpg%3Fitok%3DoHHDrfht&q=85",
         "price": 45.75,
         "rating": 4.6,
@@ -71,6 +78,7 @@
     },
     {
         "sku": 8,
+        "title": "Costa del Sol",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKffC1u0WYCV12a1NDELoNR79LSJlVstwNyCjH2wglu4Pxb3x2rQ",
         "price": 500.69,
         "rating": 4.8,

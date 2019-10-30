@@ -8,6 +8,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 
 const photoSchema = mongoose.Schema({
     sku: Number,
+    title: String,
     image: String,
     price: Number,
     rating: Number,
