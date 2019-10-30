@@ -7,7 +7,7 @@ const MainDisplay = (props) => {
     console.log('props', props);
     return (
         <div className="main-container">
-            <CardDeck>
+            <CardDeck className="entire-deck">
                 {props.pictures.map((picture, i) => <ImageDisplay className="one-card" key={i} picture={picture} />)}
                 {/* <Card>
                     <Card.Img variant="top" src="holder.js/100px160" />

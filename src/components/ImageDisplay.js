@@ -1,11 +1,12 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 const ImageDisplay = (props) => {
     console.log('prop', props)
     return (
         <div>
-            <Card>
+            <Card className="solo-card">
                 <Card.Img className="solo-pic" variant="top" src={props.picture.image} />
                 <Card.Body>
                     <Card.Title className="card-text">Image Title</Card.Title>
@@ -15,7 +16,7 @@ const ImageDisplay = (props) => {
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <small className="text-muted">Last updated 3 mins ago</small>
+                    <Button variant="primary">Details</Button>>
                 </Card.Footer>
             </Card>
             {/* <img className="solo-pic" src={props.picture.image} />
