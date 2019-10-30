@@ -75,13 +75,27 @@ body {
 /* <------------- MAIN CONTAINER --------------> */
 
 .main-container {
-    height: 700px;
-    background-color: red 
+    padding: 30px
+}
+
+.one-card {
+  padding: 15px
+}
+
+.solo-pic {
+    height: 200px;
+    width: 300px;
+    padding: 5px
+}
+
+.card-text {
+    color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 /* <------------- FOOTER --------------> */
 
 .footer-container {
     height: 80px;
-    background-color: blue
 }
