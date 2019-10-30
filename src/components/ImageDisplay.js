@@ -4,8 +4,12 @@ const ImageDisplay = (props) => {
     console.log('props: ', props);
     return (
         <div>
-            Picture
-    </div>
+            <img src={props.picture.image} />
+            <div>
+                ${props.picture.price}
+                {props.picture.rating}
+            </div>
+        </div >
     )
 }
 
