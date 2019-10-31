@@ -39,7 +39,7 @@ class ImageDisplay extends React.Component {
                             <div>Price: ${this.props.picture.price}</div>
                             <div className="rating">
                                 <div className="rating-label">Rating: </div>
-                                <StarRatings rating={this.props.picture.rating} starRatedColor="blue" starDimension="25px" starSpacing="2px"></StarRatings>
+                                <StarRatings rating={this.props.picture.rating} starRatedColor="blue" starDimension="25px" starSpacing="2px" component={'div'}></StarRatings>
                             </div>
                         </Card.Text>
                     </Card.Body>
