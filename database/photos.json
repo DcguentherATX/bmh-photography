@@ -9,9 +9,11 @@
             119.99
         ],
         "rating": 4.9,
-        "category": [
+        "category": "beach",
+        "keywords": [
             "beach",
-            "sand"
+            "sand",
+            "ocean"
         ]
     },
     {
@@ -24,9 +26,11 @@
             119.99
         ],
         "rating": 4.4,
-        "category": [
+        "category": "beach",
+        "keywords": [
             "beach",
-            "sand"
+            "sand",
+            "water"
         ]
     },
     {
@@ -39,9 +43,11 @@
             119.99
         ],
         "rating": 3.7,
-        "category": [
+        "category": "beach",
+        "keywords": [
             "beach",
-            "sand"
+            "sand",
+            "ocean"
         ]
     },
     {
@@ -54,9 +60,11 @@
             119.99
         ],
         "rating": 4.5,
-        "category": [
+        "category": "beach",
+        "keywords": [
             "beach",
-            "sand"
+            "sand",
+            "water"
         ]
     },
     {
@@ -69,9 +77,11 @@
             119.99
         ],
         "rating": 4.9,
-        "category": [
+        "category": "beach",
+        "keywords": [
             "beach",
-            "sand"
+            "sand",
+            "ocean"
         ]
     },
     {
@@ -84,9 +94,11 @@
             119.99
         ],
         "rating": 4.6,
-        "category": [
+        "category": "beach",
+        "keywords": [
             "beach",
-            "sand"
+            "sand",
+            "water"
         ]
     },
     {
@@ -99,9 +111,11 @@
             119.99
         ],
         "rating": 4.6,
-        "category": [
+        "category": "beach",
+        "keywords": [
             "beach",
-            "sand"
+            "sand",
+            "ocean"
         ]
     },
     {
@@ -114,9 +128,11 @@
             119.99
         ],
         "rating": 4.8,
-        "category": [
+        "category": "beach",
+        "keywords": [
             "beach",
-            "sand"
+            "sand",
+            "water"
         ]
     }
 ]

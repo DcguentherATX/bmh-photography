@@ -12,7 +12,8 @@ const photoSchema = mongoose.Schema({
     image: String,
     prices: [Number],
     rating: Number,
-    category: [String]
+    category: String,
+    keywords: [String]
 });
 
 let Photos = mongoose.model('Photos', photoSchema);
@@ -37,6 +38,8 @@ const getImages = (obj, cb) => {
         cb(null, images);
     })
 }
+
+// uncomment below to add photos.json to database
 
 // seedDatabase(photos);
 
