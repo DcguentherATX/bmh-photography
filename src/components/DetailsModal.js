@@ -4,8 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const DetailsModal = (props) => {
     console.log('modal props', props);
-    let sizePrice = document.getElementById("medium");
-    console.log(sizePrice);
+
     return (
         <span>
             <Modal show={props.show} onHide={props.onHide}
@@ -55,7 +54,7 @@ const DetailsModal = (props) => {
                                 </form>
                             </Col>
                             <Col>
-                                <div className="modal-total">Total: </div>
+                                <div className="modal-total">Total: ${props.currentTotal} </div>
                             </Col>
                         </Row>
                     </Container>

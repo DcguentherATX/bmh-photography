@@ -10,7 +10,9 @@ class App extends React.Component {
         super();
 
         this.state = {
-            images: []
+            images: [],
+            currentOrderPrice: 59.99,
+            currentOrderQuantity: 2
         }
 
         // bind functions here
@@ -31,11 +33,13 @@ class App extends React.Component {
     }
 
     render() {
+        let currentTotal = this.state.currentOrderPrice * this.state.currentOrderQuantity;
+
         return (
             <div>
                 <NavBar />
                 <About />
-                <MainDisplay pictures={this.state.images} />
+                <MainDisplay pictures={this.state.images} currentTotal={currentTotal} />
                 <Footer />
             </div>
         )
