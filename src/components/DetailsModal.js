@@ -3,7 +3,7 @@ import { Modal, Button } from 'react-bootstrap';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const DetailsModal = (props) => {
-    console.log('modal props', props);
+    // console.log('modal props', props);
 
     return (
         <span>
