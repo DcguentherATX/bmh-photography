@@ -196,8 +196,25 @@ body {
 /* <------------- FOOTER --------------> */
 
 .footer-container {
+    background-color: black;
+    height: 60px;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
-    height: 80px;
+    padding: 8px 16px
+}
+
+.footer-logo {
+    height: 50px;
+}
+
+.social-logo {
+    height: 40px;
+    margin: 5px
+}
+
+.instagram-logo {
+    border-radius: 5px
 }
