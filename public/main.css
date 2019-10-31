@@ -119,17 +119,27 @@ body {
 
 /* <------------- DETAILS MODAL --------------> */
 
+.modal-body-container {
+    padding: 0px
+}
+
 #modalTitle {
     color: black;
+}
+
+.modal-body{
+    padding: 0px
 }
 
 .modal-image {
     height: 200px;
     width: 300px;
+    padding-top: 1em
 }
 
 .image-description {
-    color: black
+    color: black;
+    padding: 1em 2em 1em 0em
 }
 
 /* <------------- FORM --------------> */
@@ -140,14 +150,47 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 20px;
+    /* padding-left: 20px; */
+}
+
+.form-title {
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 1em;
+}
+.form-row {
+    padding: 1em;
+    margin-left: 0px;
+    width: 100%;
+    border-top: 1px solid #dee2e6
 }
 
 .inner-form {
     display: flex;
     flex-direction: column;
     width: 95%;
-    align-items: flex-start
+    align-items: flex-start;
+    padding: 1em;
+}
+
+.order-size {
+    margin-left: 20px
+}
+
+.price {
+    margin-left: 20px
+}
+
+.input-quantity {
+    padding-bottom: 1em;
+}
+
+.quantity {
+    padding-right: 1em;
+}
+
+.modal-total {
+    color: black;
 }
 
 /* <------------- FOOTER --------------> */

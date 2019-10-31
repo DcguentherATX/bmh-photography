@@ -16,7 +16,7 @@ const DetailsModal = (props) => {
                 </Modal.Header>
 
                 <Modal.Body>
-                    <Container>
+                    <Container className="modal-body-container">
                         <Row>
                             <Col>
                                 <img src={props.picture.image} className="modal-image" />
@@ -27,22 +27,33 @@ const DetailsModal = (props) => {
                             </div>
                             </Col>
                         </Row>
-                        <Row>
+                        <Row className="form-row">
                             <Col className="form">
-                                <div>Order Form:</div>
+                                <div className="form-title">Order Form:</div>
                                 <form className="inner-form">
                                     <label htmlFor="size">Size: </label>
-                                    <input type="radio" id="small" name="size" value="59.95"
-                                        defaultChecked />
-                                    <label htmlFor="small">8 X 10 $59.95</label>
-                                    <input type="radio" id="medium" name="size" value="89.95" />
-                                    <label htmlFor="medium">12 X 24 $89.95</label>
-                                    <input type="radio" id="large" name="size" value="119.95" />
-                                    <label htmlFor="large">28 X 40 $119.95</label>
-                                    <label htmlFor="quantity">Quantity: </label>
-                                    <input type="number" id="quantity" name="quantity" min="0" max="10" placeholder="0">
-                                    </input>
+                                    <div className="order-size">
+                                        <input type="radio" id="small" name="size" value="59.95"
+                                            defaultChecked />
+                                        <label htmlFor="small">8.5 x 11 <span className="price">Price: $59.95</span></label>
+                                    </div>
+                                    <div className="order-size">
+                                        <input type="radio" id="medium" name="size" value="89.95" />
+                                        <label htmlFor="medium">18 x 24 <span className="price">Price: $89.95</span></label>
+                                    </div>
+                                    <div className="order-size">
+                                        <input type="radio" id="large" name="size" value="119.95" />
+                                        <label htmlFor="large">24 x 36 <span className="price">Price: $119.95</span></label>
+                                    </div>
+                                    <div className="input-quantity">
+                                        <label htmlFor="quantity" className="quantity" >Quantity: </label>
+                                        <input type="number" id="quantity" name="quantity" min="0" max="10" placeholder="0">
+                                        </input>
+                                    </div>
                                 </form>
+                            </Col>
+                            <Col>
+                                <div className="modal-total">Total: </div>
                             </Col>
                         </Row>
                     </Container>
