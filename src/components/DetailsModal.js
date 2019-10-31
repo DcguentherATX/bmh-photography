@@ -4,6 +4,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const DetailsModal = (props) => {
     console.log('modal props', props);
+    let sizePrice = document.getElementById("medium");
+    console.log(sizePrice);
     return (
         <span>
             <Modal show={props.show} onHide={props.onHide}
@@ -61,7 +63,7 @@ const DetailsModal = (props) => {
 
                 <Modal.Footer>
                     <Button variant="secondary" onClick={props.handleClose}>
-                        Close
+                        Add to Cart
                 </Button>
                 </Modal.Footer>
 

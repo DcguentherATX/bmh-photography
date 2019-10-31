@@ -10,7 +10,7 @@ const photoSchema = mongoose.Schema({
     sku: Number,
     title: String,
     image: String,
-    price: Number,
+    prices: [Number],
     rating: Number,
     category: [String]
 });
