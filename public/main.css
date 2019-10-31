@@ -128,6 +128,28 @@ body {
     width: 300px;
 }
 
+.image-description {
+    color: black
+}
+
+/* <------------- FORM --------------> */
+
+.form {
+    color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.inner-form {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    align-items: flex-start
+}
+
 /* <------------- FOOTER --------------> */
 
 .footer-container {

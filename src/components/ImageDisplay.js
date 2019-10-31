@@ -31,16 +31,16 @@ class ImageDisplay extends React.Component {
         // console.log('yoyoyo', this.props)
         return (
             <div>
-                <Card className="solo-card">
+                <Card className="solo-card" tag="div">
                     <Card.Img className="solo-pic" variant="top" src={this.props.picture.image} />
                     <Card.Body>
                         <Card.Title className="card-text">{this.props.picture.title}</Card.Title>
                         <Card.Text className="card-text">
-                            <div>Price: ${this.props.picture.price}</div>
-                            <div className="rating">
-                                <div className="rating-label">Rating: </div>
-                                <StarRatings rating={this.props.picture.rating} starRatedColor="blue" starDimension="25px" starSpacing="2px" component={'div'}></StarRatings>
-                            </div>
+                            <span>Price: ${this.props.picture.price}</span>
+                            <span className="rating">
+                                <span className="rating-label">Rating: </span>
+                                <StarRatings rating={this.props.picture.rating} starRatedColor="blue" starDimension="25px" starSpacing="2px"></StarRatings>
+                            </span>
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
