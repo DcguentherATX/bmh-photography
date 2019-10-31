@@ -35,17 +35,17 @@ const DetailsModal = (props) => {
                                 <form className="inner-form">
                                     <label htmlFor="size">Size: </label>
                                     <div className="order-size">
-                                        <input type="radio" id="small" name="size" value="59.95"
+                                        <input type="radio" id="small" name="size" value={props.picture.prices[0]}
                                             defaultChecked />
-                                        <label htmlFor="small">8.5 x 11 <span className="price">Price: $59.95</span></label>
+                                        <label htmlFor="small">8.5 x 11 <span className="price">Price: ${props.picture.prices[0]}</span></label>
                                     </div>
                                     <div className="order-size">
-                                        <input type="radio" id="medium" name="size" value="89.95" />
-                                        <label htmlFor="medium">18 x 24 <span className="price">Price: $89.95</span></label>
+                                        <input type="radio" id="medium" name="size" value={props.picture.prices[1]} />
+                                        <label htmlFor="medium">18 x 24 <span className="price">Price: ${props.picture.prices[1]}</span></label>
                                     </div>
                                     <div className="order-size">
-                                        <input type="radio" id="large" name="size" value="119.95" />
-                                        <label htmlFor="large">24 x 36 <span className="price">Price: $119.95</span></label>
+                                        <input type="radio" id="large" name="size" value={props.picture.prices[2]} />
+                                        <label htmlFor="large">24 x 36 <span className="price">Price: ${props.picture.prices[2]}</span></label>
                                     </div>
                                     <div className="input-quantity">
                                         <label htmlFor="quantity" className="quantity" >Quantity: </label>
