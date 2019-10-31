@@ -134,5 +134,141 @@
             "sand",
             "water"
         ]
+    },
+    {
+        "sku": 9,
+        "title": "Empire State Building",
+        "image": "https://www.worldatlas.com/r/w728-h425-c728x425/upload/58/9c/6d/shutterstock-118480225.jpg",
+        "prices": [
+            59.99,
+            89.99,
+            119.99
+        ],
+        "rating": 3.5,
+        "category": "architecture",
+        "keywords": [
+            "building",
+            "architecture",
+            "tower"
+        ]
+    },
+    {
+        "sku": 10,
+        "title": "Petronas Twin Towers",
+        "image": "https://dynaimage.cdn.cnn.com/cnn/q_auto,w_634,c_fill,g_auto,h_357,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F130802170228-skyscrapers-gallery---petronas-twin-towers.jpg",
+        "prices": [
+            59.99,
+            89.99,
+            119.99
+        ],
+        "rating": 4.2,
+        "category": "architecture",
+        "keywords": [
+            "building",
+            "architecture",
+            "tower"
+        ]
+    },
+    {
+        "sku": 11,
+        "title": "The Piano House",
+        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2013-12/enhanced/webdr06/19/11/enhanced-buzz-30101-1387468928-9.jpg?downsize=800:*&output-format=auto&output-quality=auto",
+        "prices": [
+            59.99,
+            89.99,
+            119.99
+        ],
+        "rating": 4.8,
+        "category": "architecture",
+        "keywords": [
+            "building",
+            "architecture",
+            "unique"
+        ]
+    },
+    {
+        "sku": 12,
+        "title": "Lotus Temple",
+        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2013-12/enhanced/webdr05/19/11/enhanced-buzz-orig-2388-1387471545-21.jpg?downsize=800:*&output-format=auto&output-quality=auto",
+        "prices": [
+            59.99,
+            89.99,
+            119.99
+        ],
+        "rating": 4.9,
+        "category": "architecture",
+        "keywords": [
+            "building",
+            "architecture",
+            "unique"
+        ]
+    },
+    {
+        "sku": 13,
+        "title": "Chiang Mai",
+        "image": "https://media.architecturaldigest.com/photos/58d55efada00da358c0a7749/master/w_1600%2Cc_limit/exotic-exterior-bensley-design-studios-chiang-mai-thailand-200704-2_1000-watermarked.jpg",
+        "prices": [
+            59.99,
+            89.99,
+            119.99
+        ],
+        "rating": 4.6,
+        "category": "doorways",
+        "keywords": [
+            "doorways",
+            "architecture",
+            "door"
+        ]
+    },
+    {
+        "sku": 14,
+        "title": "Los Angeles",
+        "image": "https://media.architecturaldigest.com/photos/58d552f946c96f35ad8973ac/master/w_1600%2Cc_limit/traditional-exterior-donna-livingston-beverly-hills-california-201009_1000-watermarked.jpg",
+        "prices": [
+            59.99,
+            89.99,
+            119.99
+        ],
+        "rating": 3.8,
+        "category": "doorways",
+        "keywords": [
+            "doorways",
+            "architecture",
+            "door"
+        ]
+    },
+    {
+        "sku": 15,
+        "title": "Morocco",
+        "image": "https://media.architecturaldigest.com/photos/58d5370d55104d359aef1213/master/w_1600%2Cc_limit/exotic-bathroom-sg-designs-ltd-essaouira-morocco-201205_1000-watermarked.jpg",
+        "prices": [
+            59.99,
+            89.99,
+            119.99
+        ],
+        "rating": 4.8,
+        "category": "doorways",
+        "keywords": [
+            "doorways",
+            "architecture",
+            "door"
+        ]
+    },
+    {
+        "sku": 16,
+        "title": "Punta Mita",
+        "image": "https://media.architecturaldigest.com/photos/58d557d055104d359aef156b/master/w_1600%2Cc_limit/exotic-exterior-peter-roy-bowman-punta-mita-mexico-200812_1000-watermarked.jpg",
+        "prices": [
+            59.99,
+            89.99,
+            119.99
+        ],
+        "rating": 4.4,
+        "category": "doorways",
+        "keywords": [
+            "doorways",
+            "architecture",
+            "door"
+        ]
     }
 ]
