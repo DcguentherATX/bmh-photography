@@ -16,10 +16,16 @@ class App extends React.Component {
         }
 
         // bind functions here
+
+        this.handleDropdownClick = this.handleDropdownClick.bind(this);
+    }
+
+    handleDropdownClick(e) {
+        console.log('event', e.target.getAttribute('value'));
     }
 
     componentDidMount() {
-        console.log('mounted');
+        // console.log('mounted');
         Axios.get('/pics')
             .then((response) => {
                 // console.log('response', response.data);
@@ -37,7 +43,7 @@ class App extends React.Component {
 
         return (
             <div>
-                <NavBar />
+                <NavBar handleDropdownClick={(e) => this.handleDropdownClick(e)} />
                 <About />
                 <MainDisplay pictures={this.state.images} currentTotal={currentTotal} />
                 <Footer />

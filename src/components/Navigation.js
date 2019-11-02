@@ -6,6 +6,7 @@ import logo from '../../assets/images/BMH.png';
 import cart from '../../assets/images/shopping-cart.png';
 
 const Navigation = (props) => {
+    // console.log('nav', props)
     return (
         <div className="navigation">
             <Navbar className="navbar" sticky="top">
@@ -20,9 +21,9 @@ const Navigation = (props) => {
                         }
                         id="dropdown-menu-align-right"
                     >
-                        <Dropdown.Item className="drop" eventKey="1">Beach</Dropdown.Item>
-                        <Dropdown.Item className="drop" eventKey="2">Architecture</Dropdown.Item>
-                        <Dropdown.Item className="drop" eventKey="3">Door</Dropdown.Item>
+                        <Dropdown.Item className="drop" eventKey="1" value="beach" onClick={props.handleDropdownClick} >Beach</Dropdown.Item>
+                        <Dropdown.Item className="drop" eventKey="2" value="architecture" onClick={props.handleDropdownClick} >Architecture</Dropdown.Item>
+                        <Dropdown.Item className="drop" eventKey="3" value="door" onClick={props.handleDropdownClick} >Door</Dropdown.Item>
                     </DropdownButton>
                 </div>
                 <div className="cart">
