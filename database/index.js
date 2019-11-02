@@ -28,8 +28,10 @@ const seedDatabase = (data) => {
     })
 }
 
+// returns all images
+
 const getImages = (obj, cb) => {
-    console.log('db obj: ', obj);
+    // console.log('db obj: ', obj);
     Photos.find(obj, (err, images) => {
         if (err) {
             console.log('error reading db', err)
@@ -38,6 +40,8 @@ const getImages = (obj, cb) => {
         cb(null, images);
     })
 }
+
+// returns images based on dropdown category
 
 const searchImages = (obj, cb) => {
     // console.log('search obj: ', obj);

@@ -21,11 +21,14 @@ class App extends React.Component {
     }
 
     handleDropdownClick(e) {
-        console.log('event', e.target.getAttribute('value'));
+        // console.log('event', e.target.getAttribute('value'));
         let searchTerm = e.target.getAttribute('value');
         Axios.get(`/search?term=${searchTerm}`)
             .then((response) => {
-                console.log('term response', response.data);
+                // console.log('term response', response.data);
+                this.setState({
+                    images: response.data
+                })
             })
             .catch((error) => {
                 console.log('search term error', error);

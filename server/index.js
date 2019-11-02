@@ -16,7 +16,7 @@ app.get('/pics', (req, res) => {
             console.log('error on server side');
             res.end();
         } else {
-            console.log('returned from db', data);
+            // console.log('returned from db', data);
             res.send(data);
         }
     })
@@ -28,9 +28,9 @@ app.get('/search', (req, res) => {
     db.searchImages({ searchTerm: term }, (err, data) => {
         if (err) {
             console.log('server search term error');
-            res.end;
+            res.end();
         } else {
-            console.log('returned from db', data)
+            // console.log('returned from db', data)
             res.send(data);
         }
     })
