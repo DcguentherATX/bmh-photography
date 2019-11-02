@@ -47,7 +47,7 @@ class ImageDisplay extends React.Component {
 
                         <Button onClick={this.handleShowDetailsModal} variant="primary">Details</Button>
 
-                        <DetailsModal className="details-modal" show={this.state.showDetailsModal} onHide={this.handleCloseDetailsModal} handleClose={this.handleCloseDetailsModal} picture={this.props.picture} currentTotal={this.props.currentTotal} />
+                        <DetailsModal className="details-modal" show={this.state.showDetailsModal} onHide={this.handleCloseDetailsModal} handleClose={this.handleCloseDetailsModal} picture={this.props.picture} currentTotal={this.props.currentTotal} handleAddToCartClick={this.props.handleAddToCartClick} />
                     </Card.Footer>
                 </Card>
             </div >

@@ -12,12 +12,14 @@ class App extends React.Component {
         this.state = {
             images: [],
             currentOrderPrice: 59.99,
-            currentOrderQuantity: 2
+            currentOrderQuantity: 2,
+            cart: []
         }
 
         // bind functions here
 
         this.handleDropdownClick = this.handleDropdownClick.bind(this);
+        this.handleAddToCartClick = this.handleAddToCartClick.bind(this);
     }
 
     handleDropdownClick(e) {
@@ -33,6 +35,10 @@ class App extends React.Component {
             .catch((error) => {
                 console.log('search term error', error);
             })
+    }
+
+    handleAddToCartClick() {
+        console.log('add to cart clicked')
     }
 
     componentDidMount() {
@@ -56,7 +62,7 @@ class App extends React.Component {
             <div>
                 <NavBar handleDropdownClick={(e) => this.handleDropdownClick(e)} />
                 <About />
-                <MainDisplay pictures={this.state.images} currentTotal={currentTotal} />
+                <MainDisplay pictures={this.state.images} currentTotal={currentTotal} handleAddToCartClick={this.handleAddToCartClick} />
                 <Footer />
             </div>
         )
