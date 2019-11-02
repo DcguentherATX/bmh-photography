@@ -22,6 +22,14 @@ class App extends React.Component {
 
     handleDropdownClick(e) {
         console.log('event', e.target.getAttribute('value'));
+        let searchTerm = e.target.getAttribute('value');
+        Axios.get(`/search?term=${searchTerm}`)
+            .then((response) => {
+                console.log('term response', response.data);
+            })
+            .catch((error) => {
+                console.log('search term error', error);
+            })
     }
 
     componentDidMount() {
@@ -34,7 +42,7 @@ class App extends React.Component {
                 })
             })
             .catch((error) => {
-                console.log('error', error);
+                console.log('mounting error', error);
             });
     }
 

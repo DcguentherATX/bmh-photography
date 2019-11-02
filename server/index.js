@@ -22,4 +22,10 @@ app.get('/pics', (req, res) => {
     })
 });
 
+app.get('/search', (req, res) => {
+    // console.log('search term', req.query.term);
+    let term = req.query.term;
+
+})
+
 app.listen(port, () => console.log(`server is now listening on port ${port}`));
