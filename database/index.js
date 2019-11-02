@@ -39,8 +39,21 @@ const getImages = (obj, cb) => {
     })
 }
 
+const searchImages = (obj, cb) => {
+    // console.log('search obj: ', obj);
+    let target = obj.searchTerm;
+
+    Photos.find({ category: target }, (err, images) => {
+        if (err) {
+            console.log('search term error db', err)
+        }
+        console.log('images found');
+        cb(null, images);
+    })
+}
+
 // uncomment below to add photos.json to database
 
 // seedDatabase(photos);
 
-module.exports = { getImages };
+module.exports = { getImages, searchImages };

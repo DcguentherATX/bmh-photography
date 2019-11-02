@@ -25,7 +25,15 @@ app.get('/pics', (req, res) => {
 app.get('/search', (req, res) => {
     // console.log('search term', req.query.term);
     let term = req.query.term;
-
+    db.searchImages({ searchTerm: term }, (err, data) => {
+        if (err) {
+            console.log('server search term error');
+            res.end;
+        } else {
+            console.log('returned from db', data)
+            res.send(data);
+        }
+    })
 })
 
 app.listen(port, () => console.log(`server is now listening on port ${port}`));
