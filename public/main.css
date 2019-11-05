@@ -72,6 +72,16 @@ body {
     background-color:transparent;
 }
 
+.cart-item-image {
+    max-width: 100px;
+    height: auto
+}
+
+.cart-line-item {
+    display: flex;
+    flex-direction: row
+}
+
 /* <------------- ABOUT --------------> */
 
 .about-container {

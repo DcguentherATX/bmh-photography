@@ -41,6 +41,8 @@ const Navigation = (props) => {
                         {/* <Dropdown.Item className="drop" eventKey="1" value="beach" onClick={props.handleDropdownClick} >Beach</Dropdown.Item>
                         <Dropdown.Item className="drop" eventKey="2" value="architecture" onClick={props.handleDropdownClick} >Architecture</Dropdown.Item>
                         <Dropdown.Item className="drop" eventKey="3" value="doorways" onClick={props.handleDropdownClick} >Door</Dropdown.Item> */}
+                        <Dropdown.Item className="drop" eventKey="10" value="total" onClick={props.handleDropdownClick} >Total: </Dropdown.Item>
+
                     </DropdownButton>
                 </div>
                 {/* <img className="menu" src={menu}></img> */}
