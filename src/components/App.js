@@ -67,7 +67,7 @@ class App extends React.Component {
 
         return (
             <div>
-                <NavBar handleDropdownClick={(e) => this.handleDropdownClick(e)} />
+                <NavBar handleDropdownClick={(e) => this.handleDropdownClick(e)} cartItems={this.state.cart} />
                 <About />
                 <MainDisplay pictures={this.state.images} currentTotal={currentTotal} handleAddToCartClick={this.handleAddToCartClick} />
                 <Footer />
