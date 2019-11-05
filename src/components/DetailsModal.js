@@ -61,7 +61,7 @@ const DetailsModal = (props) => {
                 </Modal.Body>
 
                 <Modal.Footer>
-                    <Button variant="primary" onClick={(props) => props.handleAddToCartClick(props)}>
+                    <Button variant="primary" onClick={() => props.handleAddToCartClick(props.picture)}>
                         Add to Cart
                 </Button>
                     <Button variant="secondary" onClick={props.handleClose}>
@@ -70,7 +70,7 @@ const DetailsModal = (props) => {
                 </Modal.Footer>
 
             </Modal>
-        </span>
+        </span >
     )
 }
 

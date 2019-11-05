@@ -39,6 +39,13 @@ class App extends React.Component {
 
     handleAddToCartClick(picture) {
         console.log('add to cart clicked', picture);
+        let currentCart = this.state.cart.slice(0);
+        currentCart.push(picture);
+
+        this.setState({
+            cart: currentCart
+        })
+        console.log('cart', this.state.cart, currentCart);
     }
 
     componentDidMount() {
