@@ -81,6 +81,10 @@ body {
     border: 40px
 }
 
+.about-row {
+    padding: 1em;
+}
+
 .pic-container {
     display: flex;
     justify-content: center;

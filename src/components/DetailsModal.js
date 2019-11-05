@@ -3,7 +3,7 @@ import { Modal, Button } from 'react-bootstrap';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const DetailsModal = (props) => {
-    console.log('modal props', props);
+    // console.log('modal props', props);
 
     return (
         <span>
@@ -61,7 +61,7 @@ const DetailsModal = (props) => {
                 </Modal.Body>
 
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={props.handleAddToCartClick}>
+                    <Button variant="primary" onClick={(props) => props.handleAddToCartClick(props)}>
                         Add to Cart
                 </Button>
                     <Button variant="secondary" onClick={props.handleClose}>

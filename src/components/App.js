@@ -37,8 +37,8 @@ class App extends React.Component {
             })
     }
 
-    handleAddToCartClick() {
-        console.log('add to cart clicked')
+    handleAddToCartClick(picture) {
+        console.log('add to cart clicked', picture);
     }
 
     componentDidMount() {
