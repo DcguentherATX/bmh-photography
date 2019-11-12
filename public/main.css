@@ -82,6 +82,16 @@ body {
     flex-direction: row
 }
 
+.cart-item-details {
+    padding: 0px 10px
+}
+
+.cart-item-total {
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
 /* <------------- ABOUT --------------> */
 
 .about-container {

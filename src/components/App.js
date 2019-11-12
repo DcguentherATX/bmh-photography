@@ -30,7 +30,10 @@ class App extends React.Component {
         this.submitHandler = this.submitHandler.bind(this);
         this.updateQuantity = this.updateQuantity.bind(this);
         this.updatePrice = this.updatePrice.bind(this);
+        this.getCartTotal = this.getCartTotal.bind(this);
     }
+
+    //  handles specified categories
 
     handleDropdownClick(e) {
         // console.log('event', e.target.getAttribute('value'));
@@ -60,6 +63,8 @@ class App extends React.Component {
         }
     }
 
+    // functions that update modal values
+
     updateQuantity(e) {
     //    console.log('quantity', e.target.value)
        e.preventDefault();
@@ -72,7 +77,7 @@ class App extends React.Component {
     }
 
     updatePrice(e){
-        console.log('new price', e.target.value);
+        // console.log('new price', e.target.value);
         let newTotal = (this.state.currentOrderQuantity * e.target.value).toFixed(2);
 
         this.setState({
@@ -82,27 +87,37 @@ class App extends React.Component {
     }
 
     handleAddToCartClick(picture) {
+        picture.quantity = Number(this.state.currentOrderQuantity);
+        picture.price = Number(this.state.currentOrderPrice);
+        picture.cost = Number((picture.quantity * picture.price).toFixed(2));
+        let total = 0;
         console.log('add to cart clicked', picture);
         let currentCart = this.state.cart.slice(0);
         currentCart.push(picture);
 
+        for (let i = 0; i < currentCart.length; i++) {
+            total += currentCart[i].cost
+        }
+        console.log('total', total)
+
         this.setState({
-            cart: currentCart
+            cart: currentCart,
+            cartTotal: total
         })
-        this.getCartTotal(currentCart);
     }
 
-    getCartTotal(array) {
-        console.log('get total', array)
+    getCartTotal() {
+        // console.log('get total', array)
+        let cart = this.state.cart;
+        console.log('cart', cart)
         let total = 0;
 
-        for (let i = 0; i < array.length; i++) {
-            console.log('element', array[i].prices)
-            total += array[i].prices[1];
+        for (let i = 0; i < cart.length; i++) {
+            // console.log('element', array[i].price)
+            total += cart[i].price;
         }
-        let fixed = total.toFixed(2)
         this.setState({
-            cartTotal: fixed
+            cartTotal: total
         })
     }
 
