@@ -1,14 +1,15 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 const SearchBar = (props) => {
     // console.log('searchBar props', props);
   return (
-      <div>
+      <div className="searchbar-container">
           <form>
-              <label htmlFor="searchword"> Search: 
-              <input type="text" id="searchword" onChange={props.handleChange}></input>
+              <label htmlFor="searchword" className="search"> Search: 
+              <input type="text" id="searchword" onChange={props.handleChange} className="search-input"></input>
               </label>
-              <button onClick={props.handleSubmit}>Submit</button>
+              <Button onClick={props.handleSubmit} variant="primary">Submit</Button>
           </form>
       </div>
   )
