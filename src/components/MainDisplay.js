@@ -5,6 +5,13 @@ import CardDeck from 'react-bootstrap/CardDeck';
 
 const MainDisplay = (props) => {
     // console.log('props', props);
+    if (props.pictures.length === 0) {
+        return (
+            <div className="no-match">
+                No matches found
+            </div>
+        )
+    } else {
     return (
         <div className="main-container">
             <CardDeck className="entire-deck">
@@ -12,6 +19,7 @@ const MainDisplay = (props) => {
             </CardDeck>
         </div>
     )
+    }
 }
 
 export default MainDisplay;

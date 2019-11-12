@@ -185,6 +185,12 @@ body {
     padding-right: 5px
 }
 
+.no-match {
+    height: 400px;
+    font-style: italic;
+    padding-top: 150px
+}
+
 /* <------------- DETAILS MODAL --------------> */
 
 .modal-body-container {

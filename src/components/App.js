@@ -32,7 +32,6 @@ class App extends React.Component {
     handleDropdownClick(e) {
         // console.log('event', e.target.getAttribute('value'));
         let searchTerm = e.target.getAttribute('value');
-        console.log(searchTerm)
         if (searchTerm === 'all') {
             Axios.get('/pics')
             .then((response) => {
