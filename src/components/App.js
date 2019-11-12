@@ -76,14 +76,17 @@ class App extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        // console.log(this.state.searchWord)
 
-
-        Axios.get(`/search?term=${this.state.searchWord}`)
+        Axios.get(`/keyword?term=${this.state.searchWord}`)
           .then((response) => {
-              console.log('getting searchbar response')
+            //   console.log('getting searchbar response', response)
+              this.setState({
+                  images: response.data
+              })
           })
           .catch((error) => {
-             console.log('error', error);
+             console.log('search error', error);
           })
     }
 

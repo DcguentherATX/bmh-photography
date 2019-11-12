@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SearchBar = (props) => {
-    console.log('searchBar props', props);
+    // console.log('searchBar props', props);
   return (
       <div>
           <form>

@@ -56,8 +56,21 @@ const searchImages = (obj, cb) => {
     })
 }
 
+const searchKeyword = (obj, cb) => {
+    // console.log('db check', obj.keyword);
+    let target = obj.keyword;
+
+    Photos.find({keywords: target}, (err, images) => {
+        if(err) {
+            console.log('keyword search error in db', err);
+        }
+        // console.log('keyword match', images);
+        cb(null, images)
+    })
+}
+
 // uncomment below to add photos.json to database
 
 // seedDatabase(photos);
 
-module.exports = { getImages, searchImages };
+module.exports = { getImages, searchImages, searchKeyword };

@@ -36,4 +36,18 @@ app.get('/search', (req, res) => {
     })
 })
 
+app.get('/keyword', (req, res) => {
+    let keyword = req.query.term;
+    // console.log(keyword)
+    db.searchKeyword({keyword: keyword}, (err, data) => {
+        if (err) {
+            console.log('error searching keyword in server', error);
+            res.end();
+        } else {
+            console.log('keyword server success');
+            res.send(data);
+        }
+    })
+})
+
 app.listen(port, () => console.log(`server is now listening on port ${port}`));

@@ -8,7 +8,7 @@ import cart from '../../assets/images/shopping-cart.png';
 
 const Navigation = (props) => {
     // console.log('nav', props)
-    console.log('cart state', props.cartItems);
+    // console.log('cart state', props.cartItems);
     return (
         <div className="navigation">
             <Navbar className="navbar" sticky="top">
