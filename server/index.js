@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', express.static('public'));
 
 app.get('/pics', (req, res) => {
-    console.log('get request');
+    // console.log('get request');
     db.getImages({}, (err, data) => {
         if (err) {
             console.log('error on server side');

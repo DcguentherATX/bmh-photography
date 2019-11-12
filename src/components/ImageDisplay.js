@@ -28,7 +28,7 @@ class ImageDisplay extends React.Component {
     }
 
     render() {
-        // console.log('yoyoyo', this.props)
+        // console.log('mapped image props', this.props)
         return (
             <div>
                 <Card className="solo-card" tag="div">
@@ -47,7 +47,15 @@ class ImageDisplay extends React.Component {
 
                         <Button onClick={this.handleShowDetailsModal} variant="primary">Details</Button>
 
-                        <DetailsModal className="details-modal" show={this.state.showDetailsModal} onHide={this.handleCloseDetailsModal} handleClose={this.handleCloseDetailsModal} picture={this.props.picture} currentTotal={this.props.currentTotal} handleAddToCartClick={this.props.handleAddToCartClick} />
+                        <DetailsModal 
+                        className="details-modal" 
+                        show={this.state.showDetailsModal} 
+                        onHide={this.handleCloseDetailsModal} 
+                        handleClose={this.handleCloseDetailsModal} 
+                        picture={this.props.picture} 
+                        currentTotal={this.props.currentTotal} 
+                        handleAddToCartClick={this.props.handleAddToCartClick} 
+                        updateQuantity={this.props.updateQuantity}/>
                     </Card.Footer>
                 </Card>
             </div >

@@ -16,7 +16,8 @@ class App extends React.Component {
             currentOrderQuantity: 2,
             cart: [],
             cartTotal: 0,
-            searchWord: ''
+            searchWord: '',
+            itemTotal: 0
         }
 
         // bind functions here
@@ -57,6 +58,19 @@ class App extends React.Component {
         }
     }
 
+    updateQuantity(e) {
+       console.log('quantity', e.target.value)
+       e.preventDefault();
+
+    //    this.setState({
+    //        currentOrderQuantity: e.target.value
+    //    })
+    }
+
+    updatePrice(){
+
+    }
+
     handleAddToCartClick(picture) {
         console.log('add to cart clicked', picture);
         let currentCart = this.state.cart.slice(0);
@@ -66,6 +80,14 @@ class App extends React.Component {
             cart: currentCart
         })
         this.getCartTotal(currentCart);
+    }
+
+    getItemTotal() {
+        let total = this.state.currentOrderPrice * this.state.currentOrderQuantity
+
+        this.setState({
+            itemTotal: total
+        })
     }
 
     getCartTotal(array) {
@@ -134,7 +156,7 @@ class App extends React.Component {
                 <NavBar handleDropdownClick={(e) => this.handleDropdownClick(e)} cartItems={this.state.cart} cartTotal={this.state.cartTotal} />
                 <About />
                 <SearchBar submitHandler={this.submitHandler} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
-                <MainDisplay pictures={this.state.images} currentTotal={currentTotal} handleAddToCartClick={this.handleAddToCartClick} />
+                <MainDisplay pictures={this.state.images} currentTotal={currentTotal} handleAddToCartClick={this.handleAddToCartClick} updateQuantity={this.updateQuantity}/>
                 <Footer />
             </div>
         )
