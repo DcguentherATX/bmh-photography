@@ -119,6 +119,27 @@ body {
   max-width: 75%;
 }
 
+/* <------------- SEARCHBAR CONTAINER --------------> */
+
+.searchbar-container {
+    margin: 10px 0px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    margin-bottom: 0px
+}
+
+.search-input {
+    margin: 0px 8px;
+    padding: 0px 8px
+}
+
 /* <------------- MAIN CONTAINER --------------> */
 
 .main-container {

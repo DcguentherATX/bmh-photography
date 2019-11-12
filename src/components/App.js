@@ -26,6 +26,7 @@ class App extends React.Component {
         this.getCartTotal = this.getCartTotal.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.submitHandler = this.submitHandler.bind(this);
     }
 
     handleDropdownClick(e) {
@@ -69,9 +70,15 @@ class App extends React.Component {
     }
 
     handleChange(e) {
+        e.preventDefault();
+
        this.setState({
            searchWord: e.target.value
        })
+    }
+
+    submitHandler(e) {
+        e.preventDefault();
     }
 
     handleSubmit(e) {
@@ -113,7 +120,7 @@ class App extends React.Component {
             <div>
                 <NavBar handleDropdownClick={(e) => this.handleDropdownClick(e)} cartItems={this.state.cart} cartTotal={this.state.cartTotal} />
                 <About />
-                <SearchBar handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+                <SearchBar submitHandler={this.submitHandler} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
                 <MainDisplay pictures={this.state.images} currentTotal={currentTotal} handleAddToCartClick={this.handleAddToCartClick} />
                 <Footer />
             </div>

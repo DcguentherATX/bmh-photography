@@ -5,7 +5,7 @@ const SearchBar = (props) => {
     // console.log('searchBar props', props);
   return (
       <div className="searchbar-container">
-          <form>
+          <form className="search-form" onSubmit={props.submitHandler}>
               <label htmlFor="searchword" className="search"> Search: 
               <input type="text" id="searchword" onChange={props.handleChange} className="search-input"></input>
               </label>
