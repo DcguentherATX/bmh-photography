@@ -74,22 +74,28 @@ body {
 
 .cart-item-image {
     max-width: 100px;
-    height: auto
+    height: auto;
+    margin-right: 20px
 }
 
 .cart-line-item {
     display: flex;
-    flex-direction: row
+    flex-direction: row;
 }
-
+/* 
 .cart-item-details {
     padding: 0px 10px
-}
+} */
 
 .cart-item-total {
-    margin-left: 20px;
+    margin-left: 30px;
     display: flex;
     justify-content: flex-end;
+    width: 100%;
+}
+
+.final-drop {
+    text-align: right; 
 }
 
 /* <------------- ABOUT --------------> */

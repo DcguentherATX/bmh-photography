@@ -39,7 +39,7 @@ const Navigation = (props) => {
                         id="dropdown-menu-align-right"
                     >
                         {props.cartItems.map((cartItem, index) => <CartDropdown cartItem={cartItem} key={index} index={index}/>)}
-                        <Dropdown.Item className="drop" eventKey="10" value="total">Total: ${props.cartTotal}</Dropdown.Item>
+                        <Dropdown.Item className="final-drop" eventKey="10" value="total"><strong>Total: ${props.cartTotal}</strong></Dropdown.Item>
 
                     </DropdownButton>
                 </div>
