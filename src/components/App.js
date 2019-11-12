@@ -32,6 +32,19 @@ class App extends React.Component {
     handleDropdownClick(e) {
         // console.log('event', e.target.getAttribute('value'));
         let searchTerm = e.target.getAttribute('value');
+        console.log(searchTerm)
+        if (searchTerm === 'all') {
+            Axios.get('/pics')
+            .then((response) => {
+                // console.log('response', response.data);
+                this.setState({
+                    images: response.data
+                })
+            })
+            .catch((error) => {
+                console.log('mounting error', error);
+            });
+        } else {
         Axios.get(`/search?term=${searchTerm}`)
             .then((response) => {
                 // console.log('term response', response.data);
@@ -42,6 +55,7 @@ class App extends React.Component {
             .catch((error) => {
                 console.log('search term error', error);
             })
+        }
     }
 
     handleAddToCartClick(picture) {

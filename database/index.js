@@ -36,7 +36,7 @@ const getImages = (obj, cb) => {
         if (err) {
             console.log('error reading db', err)
         }
-        console.log('images found');
+        console.log('images found', images);
         cb(null, images);
     })
 }
