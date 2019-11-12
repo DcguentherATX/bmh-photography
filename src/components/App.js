@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from '../components/Navigation';
+import SearchBar from '../components/SearchBar';
 import Footer from '../components/Footer';
 import About from '../components/About';
 import MainDisplay from '../components/MainDisplay';
@@ -14,7 +15,8 @@ class App extends React.Component {
             currentOrderPrice: 59.99,
             currentOrderQuantity: 2,
             cart: [],
-            cartTotal: 0
+            cartTotal: 0,
+            searchWord: ''
         }
 
         // bind functions here
@@ -22,6 +24,8 @@ class App extends React.Component {
         this.handleDropdownClick = this.handleDropdownClick.bind(this);
         this.handleAddToCartClick = this.handleAddToCartClick.bind(this);
         this.getCartTotal = this.getCartTotal.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleDropdownClick(e) {
@@ -64,7 +68,24 @@ class App extends React.Component {
         })
     }
 
+    handleChange(e) {
+       this.setState({
+           searchWord: e.target.value
+       })
+    }
 
+    handleSubmit(e) {
+        e.preventDefault();
+
+
+        Axios.get(`/search?term=${this.state.searchWord}`)
+          .then((response) => {
+              console.log('getting searchbar response')
+          })
+          .catch((error) => {
+             console.log('error', error);
+          })
+    }
 
 
     componentDidMount() {
@@ -89,6 +110,7 @@ class App extends React.Component {
             <div>
                 <NavBar handleDropdownClick={(e) => this.handleDropdownClick(e)} cartItems={this.state.cart} cartTotal={this.state.cartTotal} />
                 <About />
+                <SearchBar handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
                 <MainDisplay pictures={this.state.images} currentTotal={currentTotal} handleAddToCartClick={this.handleAddToCartClick} />
                 <Footer />
             </div>
