@@ -29,6 +29,7 @@ class App extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.submitHandler = this.submitHandler.bind(this);
         this.updateQuantity = this.updateQuantity.bind(this);
+        this.updatePrice = this.updatePrice.bind(this);
     }
 
     handleDropdownClick(e) {
@@ -62,15 +63,22 @@ class App extends React.Component {
     updateQuantity(e) {
     //    console.log('quantity', e.target.value)
        e.preventDefault();
+       let newTotal = (e.target.value * this.state.currentOrderPrice).toFixed(2);
 
        this.setState({
            currentOrderQuantity: e.target.value,
-           itemTotal: e.target.value * this.state.currentOrderPrice
+           itemTotal: newTotal
        })
     }
 
-    updatePrice(){
+    updatePrice(e){
+        console.log('new price', e.target.value);
+        let newTotal = (this.state.currentOrderQuantity * e.target.value).toFixed(2);
 
+        this.setState({
+            currentOrderPrice: e.target.value,
+            itemTotal: newTotal
+        })
     }
 
     handleAddToCartClick(picture) {
@@ -82,14 +90,6 @@ class App extends React.Component {
             cart: currentCart
         })
         this.getCartTotal(currentCart);
-    }
-
-    getItemTotal(quantity) {
-        let total = this.state.currentOrderPrice * quantity
-
-        this.setState({
-            itemTotal: total
-        })
     }
 
     getCartTotal(array) {
@@ -158,7 +158,7 @@ class App extends React.Component {
                 <NavBar handleDropdownClick={(e) => this.handleDropdownClick(e)} cartItems={this.state.cart} cartTotal={this.state.cartTotal} />
                 <About />
                 <SearchBar submitHandler={this.submitHandler} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
-                <MainDisplay pictures={this.state.images} currentTotal={currentTotal} handleAddToCartClick={this.handleAddToCartClick} updateQuantity={this.updateQuantity} itemTotal={this.state.itemTotal}/>
+                <MainDisplay pictures={this.state.images} currentTotal={currentTotal} handleAddToCartClick={this.handleAddToCartClick} updateQuantity={this.updateQuantity} itemTotal={this.state.itemTotal} updatePrice={this.updatePrice}/>
                 <Footer />
             </div>
         )

@@ -22,6 +22,7 @@ const MainDisplay = (props) => {
                 handleAddToCartClick={props.handleAddToCartClick} 
                 updateQuantity={props.updateQuantity}
                 itemTotal={props.itemTotal}
+                updatePrice={props.updatePrice}
                 />)}
             </CardDeck>
         </div>
