@@ -55,7 +55,8 @@ class ImageDisplay extends React.Component {
                         picture={this.props.picture} 
                         currentTotal={this.props.currentTotal} 
                         handleAddToCartClick={this.props.handleAddToCartClick} 
-                        updateQuantity={this.props.updateQuantity}/>
+                        updateQuantity={this.props.updateQuantity}
+                        itemTotal={this.props.itemTotal}/>
                     </Card.Footer>
                 </Card>
             </div >

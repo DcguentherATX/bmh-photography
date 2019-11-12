@@ -3,7 +3,7 @@ import { Modal, Button } from 'react-bootstrap';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const DetailsModal = (props) => {
-    console.log('modal props', props);
+    // console.log('modal props', props);
 
     return (
         <span>
@@ -48,13 +48,13 @@ const DetailsModal = (props) => {
                                     </div>
                                     <div className="input-quantity">
                                         <label htmlFor="quantity" className="quantity" >Quantity: </label>
-                                        <input type="number" id="quantity" name="quantity" min="0" max="10" placeholder="0" onChange={(e) => props.updateQuantity(e)}>
+                                        <input type="number" id="quantity" name="quantity" min="0" max="10" placeholder="0" onChange={props.updateQuantity}>
                                         </input>
                                     </div>
                                 </form>
                             </Col>
                             <Col>
-                                <div className="modal-total">Total: ${props.currentTotal} </div>
+                                <div className="modal-total">Total: ${props.itemTotal} </div>
                             </Col>
                         </Row>
                     </Container>

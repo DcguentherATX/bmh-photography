@@ -15,7 +15,14 @@ const MainDisplay = (props) => {
     return (
         <div className="main-container">
             <CardDeck className="entire-deck">
-                {props.pictures.map((picture, i) => <ImageDisplay className="one-card" key={i} picture={picture} currentTotal={props.currentTotal} handleAddToCartClick={props.handleAddToCartClick} updateQuantity={props.updateQuantity}/>)}
+                {props.pictures.map((picture, i) => <ImageDisplay 
+                className="one-card" 
+                key={i} picture={picture} 
+                currentTotal={props.currentTotal} 
+                handleAddToCartClick={props.handleAddToCartClick} 
+                updateQuantity={props.updateQuantity}
+                itemTotal={props.itemTotal}
+                />)}
             </CardDeck>
         </div>
     )
