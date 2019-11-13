@@ -24,13 +24,11 @@ class App extends React.Component {
 
         this.handleDropdownClick = this.handleDropdownClick.bind(this);
         this.handleAddToCartClick = this.handleAddToCartClick.bind(this);
-        this.getCartTotal = this.getCartTotal.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.submitHandler = this.submitHandler.bind(this);
         this.updateQuantity = this.updateQuantity.bind(this);
         this.updatePrice = this.updatePrice.bind(this);
-        this.getCartTotal = this.getCartTotal.bind(this);
     }
 
     //  handles specified categories
@@ -68,33 +66,38 @@ class App extends React.Component {
     updateQuantity(e) {
     //    console.log('quantity', e.target.value)
        e.preventDefault();
-       let newTotal = (e.target.value * this.state.currentOrderPrice).toFixed(2);
+       let quantity = Number(e.target.value);
+            let newTotal = Number((quantity * this.state.currentOrderPrice).toFixed(2));
 
-       this.setState({
-           currentOrderQuantity: e.target.value,
-           itemTotal: newTotal
-       })
+            this.setState({
+                currentOrderQuantity: quantity,
+                itemTotal: newTotal
+            })
     }
 
     updatePrice(e){
         // console.log('new price', e.target.value);
-        let newTotal = (this.state.currentOrderQuantity * e.target.value).toFixed(2);
+        let price = Number(e.target.value);
+        let newTotal = Number((this.state.currentOrderQuantity * price).toFixed(2));
 
         this.setState({
-            currentOrderPrice: e.target.value,
+            currentOrderPrice: price,
             itemTotal: newTotal
         })
     }
 
+    // updates shopping cart
+
     handleAddToCartClick(picture) {
-        picture.quantity = Number(this.state.currentOrderQuantity);
-        picture.price = Number(this.state.currentOrderPrice);
+        picture.quantity = this.state.currentOrderQuantity;
+        picture.price = this.state.currentOrderPrice;
         picture.cost = Number((picture.quantity * picture.price).toFixed(2));
         let total = 0;
         console.log('add to cart clicked', picture);
         let currentCart = this.state.cart.slice(0);
         currentCart.push(picture);
 
+        if (picture.quantity > 0 && picture.quantity <= 10) {
         for (let i = 0; i < currentCart.length; i++) {
             total += currentCart[i].cost
         }
@@ -104,21 +107,9 @@ class App extends React.Component {
             cart: currentCart,
             cartTotal: total
         })
+    } else {
+        console.log('out of range')
     }
-
-    getCartTotal() {
-        // console.log('get total', array)
-        let cart = this.state.cart;
-        console.log('cart', cart)
-        let total = 0;
-
-        for (let i = 0; i < cart.length; i++) {
-            // console.log('element', array[i].price)
-            total += cart[i].price;
-        }
-        this.setState({
-            cartTotal: total
-        })
     }
 
     handleChange(e) {

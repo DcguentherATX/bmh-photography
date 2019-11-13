@@ -17,7 +17,7 @@ class ImageDisplay extends React.Component {
         this.handleCloseDetailsModal = this.handleCloseDetailsModal.bind(this);
 
     }
-    //helper functions
+    // modal helper functions
 
     handleShowDetailsModal() {
         this.setState({ showDetailsModal: true });

@@ -47,7 +47,7 @@ const DetailsModal = (props) => {
                                         <label htmlFor="large">24 x 36 <span className="price">Price: ${props.picture.prices[2]}</span></label>
                                     </div>
                                     <div className="input-quantity">
-                                        <label htmlFor="quantity" className="quantity" >Quantity: </label>
+                                        <label htmlFor="quantity" className="quantity" >Quantity (max 10): </label>
                                         <input type="number" id="quantity" name="quantity" min="0" max="10" placeholder="0" onChange={props.updateQuantity}>
                                         </input>
                                     </div>
