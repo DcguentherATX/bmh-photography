@@ -7,12 +7,12 @@ import MainDisplay from '../components/MainDisplay';
 import Axios from 'axios';
 
 class App extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             images: [],
-            currentOrderPrice: 59.99,
+            currentOrderPrice: 0,
             currentOrderQuantity: 0,
             cart: [],
             cartTotal: 0,
@@ -64,15 +64,15 @@ class App extends React.Component {
     // functions that update modal values
 
     updateQuantity(e) {
-    //    console.log('quantity', e.target.value)
+    //    console.log('quantity', typeof e.target.value)
        e.preventDefault();
        let quantity = Number(e.target.value);
-            let newTotal = Number((quantity * this.state.currentOrderPrice).toFixed(2));
+       let newTotal = Number((quantity * this.state.currentOrderPrice).toFixed(2));
 
-            this.setState({
-                currentOrderQuantity: quantity,
-                itemTotal: newTotal
-            })
+        this.setState({
+            currentOrderQuantity: quantity,
+            itemTotal: newTotal
+        })
     }
 
     updatePrice(e){
@@ -97,19 +97,17 @@ class App extends React.Component {
         let currentCart = this.state.cart.slice(0);
         currentCart.push(picture);
 
-        if (picture.quantity > 0 && picture.quantity <= 10) {
+
         for (let i = 0; i < currentCart.length; i++) {
             total += currentCart[i].cost
         }
         console.log('total', total)
+        total = total.toFixed(2);
 
         this.setState({
             cart: currentCart,
             cartTotal: total
         })
-    } else {
-        console.log('out of range')
-    }
     }
 
     handleChange(e) {
@@ -145,7 +143,7 @@ class App extends React.Component {
         // console.log('mounted');
         Axios.get('/pics')
             .then((response) => {
-                // console.log('response', response.data);
+                // console.log('response', response);
                 this.setState({
                     images: response.data
                 })
@@ -153,6 +151,7 @@ class App extends React.Component {
             .catch((error) => {
                 console.log('mounting error', error);
             });
+
     }
 
 
