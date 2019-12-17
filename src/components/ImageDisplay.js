@@ -32,8 +32,8 @@ class ImageDisplay extends React.Component {
         return (
             <div>
                 <Card className="solo-card" tag="div">
-                    <Card.Img className="solo-pic" variant="top" src={this.props.picture.image} />
-                    <Card.Body>
+                    <Card.Img className="solo-pic" tag="div" variant="top" src={this.props.picture.image} />
+                    <Card.Body >
                         <Card.Title className="card-text">{this.props.picture.title}</Card.Title>
                         <Card.Text className="card-text">
                             <span>Price: ${this.props.picture.prices[0]}</span>
@@ -60,7 +60,7 @@ class ImageDisplay extends React.Component {
                         updatePrice={this.props.updatePrice}/>
                     </Card.Footer>
                 </Card>
-            </div >
+            </div>
         )
     }
 }

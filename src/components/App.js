@@ -37,7 +37,12 @@ class App extends React.Component {
         // console.log('event', e.target.getAttribute('value'));
         let searchTerm = e.target.getAttribute('value');
         if (searchTerm === 'all') {
-            Axios.get('/pics')
+            Axios.get('/pics', {
+                params: {
+                    id: 1,
+                    term: searchTerm
+                }
+            })
             .then((response) => {
                 // console.log('response', response.data);
                 this.setState({
@@ -48,7 +53,13 @@ class App extends React.Component {
                 console.log('mounting error', error);
             });
         } else {
-        Axios.get(`/search?term=${searchTerm}`)
+        // Axios.get(`/search?term=${searchTerm}`)
+        Axios.get(`/search`, {
+            params: {
+                id: 2,
+                term: searchTerm
+            }
+        })
             .then((response) => {
                 // console.log('term response', response.data);
                 this.setState({
@@ -126,7 +137,12 @@ class App extends React.Component {
         e.preventDefault();
         // console.log(this.state.searchWord)
 
-        Axios.get(`/keyword?term=${this.state.searchWord}`)
+        // Axios.get(`/keyword?term=${this.state.searchWord}`)
+        Axios.get(`/keyword`, {
+            params: {
+                term: this.state.searchWord
+            }
+        })
           .then((response) => {
             //   console.log('getting searchbar response', response)
               this.setState({
@@ -140,7 +156,7 @@ class App extends React.Component {
 
 
     componentDidMount() {
-        // console.log('mounted');
+        console.log('mounted');
         Axios.get('/pics')
             .then((response) => {
                 // console.log('response', response);

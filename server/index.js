@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', express.static('public'));
 
 app.get('/pics', (req, res) => {
-    // console.log('get request');
+    console.log('req', req);
     db.getImages({}, (err, data) => {
         if (err) {
             console.log('error on server side');
@@ -23,8 +23,7 @@ app.get('/pics', (req, res) => {
 });
 
 app.get('/search', (req, res) => {
-    // console.log('search term', req.query.term);
-    let term = req.query.term;
+    console.log('search term', req);
     db.searchImages({ searchTerm: term }, (err, data) => {
         if (err) {
             console.log('server search term error');
@@ -38,7 +37,7 @@ app.get('/search', (req, res) => {
 
 app.get('/keyword', (req, res) => {
     let keyword = req.query.term;
-    // console.log(keyword)
+    // console.log(keyword, req)
     db.searchKeyword({keyword: keyword}, (err, data) => {
         if (err) {
             console.log('error searching keyword in server', error);
